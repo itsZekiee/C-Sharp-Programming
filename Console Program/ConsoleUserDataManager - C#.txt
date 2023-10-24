@@ -1,0 +1,103 @@
+using System;
+using System.Collections.Generic;
+
+public class UserData
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+}
+
+public class Class1
+{
+    static List<UserData> userList = new List<UserData>();
+
+    static void Main(string[] args)
+    {
+        bool continueAdding = true;
+
+        while (continueAdding && userList.Count < 10)
+        {
+            Console.Clear(); 
+            DisplayMenu();
+
+            string choice = Console.ReadLine();
+
+            switch (choice)
+            {
+                case "1":
+                    AddUserData();
+                    break;
+                case "2":
+                    DisplayAllUserData();
+                    break;
+                case "3":
+                    DisplaySpecificUserData();
+                    break;
+                case "4":
+                    continueAdding = false;
+                    break;
+                default:
+                    Console.WriteLine("Invalid choice. Please select a valid option.");
+                    break;
+            }
+        }
+    }
+
+    static void DisplayMenu()
+    {
+        Console.WriteLine("User Data Management System");
+        Console.WriteLine("1. Add User Data");
+        Console.WriteLine("2. Display All User Data");
+        Console.WriteLine("3. Display Specific User Data");
+        Console.WriteLine("4. Exit");
+        Console.Write("Select an option: ");
+    }
+
+    static void AddUserData()
+    {
+        Console.Write("Enter your name: ");
+        string name = Console.ReadLine();
+
+        Console.Write("Enter your age: ");
+        int age = int.Parse(Console.ReadLine());
+
+        userList.Add(new UserData { Name = name, Age = age });
+
+        Console.WriteLine("User data added successfully. Press Enter to continue.");
+        Console.ReadLine();
+    }
+
+    static void DisplayAllUserData()
+    {
+        Console.Clear();
+        Console.WriteLine("All User Data:");
+        foreach (var user in userList)
+        {
+            Console.WriteLine($"Name: {user.Name}, Age: {user.Age}");
+        }
+        Console.WriteLine("Press Enter to continue.");
+        Console.ReadLine();
+    }
+
+    static void DisplaySpecificUserData()
+    {
+        Console.Write("Enter a number (1-10) to display user data: ");
+        int userNumber = int.Parse(Console.ReadLine());
+
+        if (userNumber >= 1 && userNumber <= userList.Count)
+        {
+            UserData selectedUser = userList[userNumber - 1]; // 
+            Console.Clear();
+            Console.WriteLine($"User Data for User #{userNumber}");
+            Console.WriteLine($"Name: {selectedUser.Name}");
+            Console.WriteLine($"Age: {selectedUser.Age}");
+        }
+        else
+        {
+            Console.WriteLine("Invalid number. Please enter a valid user number.");
+        }
+
+        Console.WriteLine("Press Enter to continue.");
+        Console.ReadLine();
+    }
+}
