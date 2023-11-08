@@ -1,0 +1,15 @@
+D:\Users\HUBBY-PC\Documents\Programming\C Sharp\Coding_Challenge_One_Validation\Coding_Challenge_One_Validation\obj\Debug\net6.0\Coding_Challenge_One_Validation.csproj.AssemblyReference.cache
+D:\Users\HUBBY-PC\Documents\Programming\C Sharp\Coding_Challenge_One_Validation\Coding_Challenge_One_Validation\obj\Debug\net6.0\Coding_Challenge_One_Validation.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\HUBBY-PC\Documents\Programming\C Sharp\Coding_Challenge_One_Validation\Coding_Challenge_One_Validation\obj\Debug\net6.0\Coding_Challenge_One_Validation.AssemblyInfoInputs.cache
+D:\Users\HUBBY-PC\Documents\Programming\C Sharp\Coding_Challenge_One_Validation\Coding_Challenge_One_Validation\obj\Debug\net6.0\Coding_Challenge_One_Validation.AssemblyInfo.cs
+D:\Users\HUBBY-PC\Documents\Programming\C Sharp\Coding_Challenge_One_Validation\Coding_Challenge_One_Validation\obj\Debug\net6.0\Coding_Challenge_One_Validation.csproj.CoreCompileInputs.cache
+D:\Users\HUBBY-PC\Documents\Programming\C Sharp\Coding_Challenge_One_Validation\Coding_Challenge_One_Validation\bin\Debug\net6.0\Coding_Challenge_One_Validation.exe
+D:\Users\HUBBY-PC\Documents\Programming\C Sharp\Coding_Challenge_One_Validation\Coding_Challenge_One_Validation\bin\Debug\net6.0\Coding_Challenge_One_Validation.deps.json
+D:\Users\HUBBY-PC\Documents\Programming\C Sharp\Coding_Challenge_One_Validation\Coding_Challenge_One_Validation\bin\Debug\net6.0\Coding_Challenge_One_Validation.runtimeconfig.json
+D:\Users\HUBBY-PC\Documents\Programming\C Sharp\Coding_Challenge_One_Validation\Coding_Challenge_One_Validation\bin\Debug\net6.0\Coding_Challenge_One_Validation.dll
+D:\Users\HUBBY-PC\Documents\Programming\C Sharp\Coding_Challenge_One_Validation\Coding_Challenge_One_Validation\bin\Debug\net6.0\Coding_Challenge_One_Validation.pdb
+D:\Users\HUBBY-PC\Documents\Programming\C Sharp\Coding_Challenge_One_Validation\Coding_Challenge_One_Validation\obj\Debug\net6.0\Coding_Challenge_One_Validation.dll
+D:\Users\HUBBY-PC\Documents\Programming\C Sharp\Coding_Challenge_One_Validation\Coding_Challenge_One_Validation\obj\Debug\net6.0\refint\Coding_Challenge_One_Validation.dll
+D:\Users\HUBBY-PC\Documents\Programming\C Sharp\Coding_Challenge_One_Validation\Coding_Challenge_One_Validation\obj\Debug\net6.0\Coding_Challenge_One_Validation.pdb
+D:\Users\HUBBY-PC\Documents\Programming\C Sharp\Coding_Challenge_One_Validation\Coding_Challenge_One_Validation\obj\Debug\net6.0\Coding_Challenge_One_Validation.genruntimeconfig.cache
+D:\Users\HUBBY-PC\Documents\Programming\C Sharp\Coding_Challenge_One_Validation\Coding_Challenge_One_Validation\obj\Debug\net6.0\ref\Coding_Challenge_One_Validation.dll

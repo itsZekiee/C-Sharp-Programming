@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Coding_Challenge_One_Validation/1.0.0": {
+        "runtime": {
+          "Coding_Challenge_One_Validation.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Coding_Challenge_One_Validation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
