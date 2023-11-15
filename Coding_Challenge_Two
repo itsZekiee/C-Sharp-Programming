@@ -4,7 +4,7 @@
 Code:
 using System;
 
-public class Coding_Challenge_Two
+public class GradeCalculator
 {
     public static void Main()
     {
@@ -20,15 +20,18 @@ public class Coding_Challenge_Two
             userGrades[i] = int.Parse(Console.ReadLine());
         }
 
+        GradeAnalyzer gradeAnalyzer = new GradeAnalyzer();
         int numFailures, numPasses;
-        CalculatePassFail(userGrades, out numFailures, out numPasses);
+        gradeAnalyzer.CalculatePassFail(userGrades, out numFailures, out numPasses);
 
         Console.WriteLine($"Number of Failure: {numFailures}");
         Console.WriteLine($"Number of Pass: {numPasses}");
     }
+}
 
-
-    public static void CalculatePassFail(int[] userGrades, out int numFailures, out int numPasses)
+public class GradeAnalyzer
+{
+    public void CalculatePassFail(int[] userGrades, out int numFailures, out int numPasses)
     {
         numFailures = 0;
         numPasses = 0;
@@ -46,5 +49,3 @@ public class Coding_Challenge_Two
         }
     }
 }
-
-
