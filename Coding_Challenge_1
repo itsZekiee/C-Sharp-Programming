@@ -1,4 +1,50 @@
 // Coding Challenge One 
 // November 15, 2023
+using System;
 
-using 
+class Program
+{
+    static void Main()
+    {
+        bool isValidInput = false;
+
+        do
+        {
+            Console.Write("Enter an Int Value: ");
+            string userInput = Console.ReadLine();
+
+            isValidInput = IsIntValue(userInput);
+
+            if (!isValidInput)
+            {
+                Console.WriteLine("Result: False, Enter an Int Value.");
+            }
+            else
+            {
+                Console.WriteLine("Result: True");
+            }
+
+        } while (!isValidInput);
+    }
+
+    static bool IsIntValue(string input)
+    {
+        if (string.IsNullOrWhiteSpace(input))
+        {
+            return false;
+        }
+
+        foreach (char character in input)
+        {
+            if (character < '0' || character > '9')
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+}
+
+
+
