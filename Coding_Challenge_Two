@@ -5,9 +5,18 @@
 Instruction:
 
 • Class name is "Coding_Challenge_Two"
-• 
-
+• int[] grades = new grades[5] {90, 87, 56, 78, 100}
+• Remarks: Passed (from 81 to 100), Failure (from 79 and Below),
 
 Code:
+using System;
 
+class Program
+{
+    static void Main()
+    {
+				int[] grades = new grades[5] {90, 87, 56, 78, 100};
+				
+		}
+}
 
