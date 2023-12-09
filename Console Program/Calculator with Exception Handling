@@ -10,7 +10,7 @@
         catch (Exception ex)
         {
             // Display any exceptions that occur
-            Console.WriteLine($"Error/s:\n{ex.Message}");
+            Console.WriteLine("Error/s:\n{ex.Message}");
         }
     
     static int GetUserInput(string prompt)
@@ -50,15 +50,15 @@
                 Console.WriteLine($"Result: Sum of {value1} and {value2} is {Add(value1, value2)}.");
                 break;
             case 2:
-                Console.WriteLine($"Result: Sum of {value1} and {value2} is {Subtract(value1, value2)}.");
+                Console.WriteLine("Result: Sum of {value1} and {value2} is {Subtract(value1, value2)}.");
                 break;
             case 3:
-                Console.WriteLine($"Result: Sum of {value1} and {value2} is {Multiply(value1, value2)}.");
+                Console.WriteLine("Result: Sum of {value1} and {value2} is {Multiply(value1, value2)}.");
                 break;
             case 4:
                 try
                 {
-                    Console.WriteLine($"Result: Quotient of {value1} and {value2} is {Divide(value1, value2)}.");
+                    Console.WriteLine("Result: Quotient of {value1} and {value2} is {Divide(value1, value2)}.");
                 }
                 catch (DivideByZeroException)
                 {
