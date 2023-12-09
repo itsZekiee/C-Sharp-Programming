@@ -1,0 +1,88 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Initialize arrays for grades
+        int[] quizzes = new int[3];
+        int[] recitation = new int[4];
+        int[] assignment = new int[4];
+        int[] handsOn = new int[3];
+        int[] projects = new int[2];
+        int[] examinations = new int[2];
+
+        // Get user input for grades
+        GetInputGrades("Quizzes", quizzes);
+        GetInputGrades("Recitation", recitation);
+        GetInputGrades("Assignment", assignment);
+        GetInputGrades("Hands-On", handsOn);
+        GetInputGrades("Projects", projects);
+        GetInputGrades("Examinations", examinations);
+
+        // Display grades
+        Console.WriteLine("\nGrades:");
+        DisplayGrades("Quizzes", quizzes);
+        DisplayGrades("Recitation", recitation);
+        DisplayGrades("Assignment", assignment);
+        DisplayGrades("Hands-On", handsOn);
+        DisplayGrades("Projects", projects);
+        DisplayGrades("Examinations", examinations);
+
+        // Compute and display averages
+        Console.WriteLine("\nAverages:");
+        ComputeAndDisplayAverage("Quizzes", quizzes, 30);
+        ComputeAndDisplayAverage("Recitation", recitation, 5);
+        ComputeAndDisplayAverage("Assignment", assignment, 5);
+        ComputeAndDisplayAverage("Hands-On", handsOn, 10);
+        ComputeAndDisplayAverage("Projects", projects, 20); // Corrected weight
+        ComputeAndDisplayAverage("Examinations", examinations, 30);
+
+        Console.ReadLine();
+    }
+
+    static void GetInputGrades(string category, int[] grades)
+    {
+        Console.WriteLine($"\nEnter grades for {category}:");
+        for (int i = 0; i < grades.Length; i++)
+        {
+            Console.Write($"{category} {i + 1}: ");
+            if (int.TryParse(Console.ReadLine(), out int grade))
+            {
+                grades[i] = grade;
+            }
+            else
+            {
+                Console.WriteLine("Invalid input. Please enter a valid numeric grade.");
+                i--;
+            }
+        }
+    }
+
+    static void DisplayGrades(string category, int[] grades)
+    {
+        Console.Write($"{category.PadRight(15)}: ");
+        foreach (int grade in grades)
+        {
+            Console.Write($"{grade}% ");
+        }
+        Console.WriteLine();
+    }
+
+    static double ComputeAverage(int[] grades, int weight)
+    {
+        double total = 0;
+        foreach (int grade in grades)
+        {
+            total += grade;
+        }
+        return total / grades.Length;
+    }
+
+    static void ComputeAndDisplayAverage(string category, int[] grades, int weight)
+    {
+        double average = ComputeAverage(grades, weight);
+        Console.WriteLine($"{category.PadRight(20)}: {average.ToString("0.00")}% " +
+                          $"({(average >= 75 ? "PASS" : "FAILURE")})");
+    }
+}
