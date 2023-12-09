@@ -1,9 +1,4 @@
-using System;
 
-class Calculator
-{
-    static void Main()
-    {
         try
         {
             Console.WriteLine("Test data 1:");
@@ -17,8 +12,7 @@ class Calculator
             // Display any exceptions that occur
             Console.WriteLine($"Error/s:\n{ex.Message}");
         }
-    }
-
+    
     static int GetUserInput(string prompt)
     {
         while (true)
@@ -99,4 +93,4 @@ class Calculator
 
         return a / b;
     }
-}
+
