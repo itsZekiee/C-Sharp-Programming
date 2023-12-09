@@ -1,0 +1,102 @@
+using System;
+
+class Calculator
+{
+    static void Main()
+    {
+        try
+        {
+            Console.WriteLine("Test data 1:");
+            // User input 
+            int value1 = GetUserInput("Enter integer value 1: ");
+            int value2 = GetUserInput("Enter integer value 2: ");
+            PerformOperation(value1, value2);
+        }
+        catch (Exception ex)
+        {
+            // Display any exceptions that occur
+            Console.WriteLine($"Error/s:\n{ex.Message}");
+        }
+    }
+
+    static int GetUserInput(string prompt)
+    {
+        while (true)
+        {
+            try
+            {
+                Console.Write(prompt);
+                string input = Console.ReadLine();
+
+                if (string.IsNullOrWhiteSpace(input))
+                    throw new ArgumentException("Empty or null argument is not accepted");
+
+                if (!int.TryParse(input, out int result))
+                    throw new ArgumentException("Not a number value is not accepted");
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Invalid input data!\n> {ex.Message}");
+            }
+        }
+    }
+
+    static void PerformOperation(int value1, int value2)
+    {
+        Console.WriteLine("[1] Add\n[2] Subtract\n[3] Multiply\n[4] Divide");
+        Console.Write("Selected operation: ");
+
+        int choice = int.Parse(Console.ReadLine());
+
+        switch (choice)
+        {
+            case 1:
+                Console.WriteLine($"Result: Sum of {value1} and {value2} is {Add(value1, value2)}.");
+                break;
+            case 2:
+                Console.WriteLine($"Result: Sum of {value1} and {value2} is {Subtract(value1, value2)}.");
+                break;
+            case 3:
+                Console.WriteLine($"Result: Sum of {value1} and {value2} is {Multiply(value1, value2)}.");
+                break;
+            case 4:
+                try
+                {
+                    Console.WriteLine($"Result: Quotient of {value1} and {value2} is {Divide(value1, value2)}.");
+                }
+                catch (DivideByZeroException)
+                {
+                    Console.WriteLine("Result: Cannot divide by zero!");
+                }
+                break;
+            default:
+                Console.WriteLine("Invalid operation selected.");
+                break;
+        }
+    }
+
+    static int Add(int a, int b)
+    {
+        return a + b;
+    }
+
+    static int Subtract(int a, int b)
+    {
+        return a - b;
+    }
+
+    static int Multiply(int a, int b)
+    {
+        return a * b;
+    }
+
+    static int Divide(int a, int b)
+    {
+        if (b == 0)
+            throw new DivideByZeroException("Cannot divide by zero!");
+
+        return a / b;
+    }
+}
